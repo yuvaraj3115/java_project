@@ -12,7 +12,8 @@
         <h1> HYDERABAD </h1> 
         <h1> GOOD DAY </h1>
         <h2> NICE DAY </h2>
-        
+        <h1> HELLO GOOD DAY </h1>
+        <h1> NICE DAY </h1>    
         GET all the <a href="${pageContext.request.contextPath}/resources/persons"/>persons</a>.
     </body>
 </html>
