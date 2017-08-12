@@ -10,6 +10,7 @@
         <h1>Hello New Java EE Continuous Delivery!</h1>
         <h1>SATHYA TECHNOLOGIES</h1>
         <h1> GOOD DAY </h1> 
+        <h1> Hello Good day </h1>
         <h1> This is a Node code for Jenkins </h1>
         GET all the <a href="${pageContext.request.contextPath}/resources/persons"/>persons</a>.
     </body>
