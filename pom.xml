@@ -33,7 +33,7 @@
         <repository>
             <id>deployment</id>
             <name>Internal Releases</name>
-            <url>http://10.128.0.3:8081/nexus/content/repositories/releases/</url>
+            <url>http://52.43.230.15:8080/webapps/</url>
         </repository>
         <snapshotRepository>
             <id>deployment</id>
