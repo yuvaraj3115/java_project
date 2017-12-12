@@ -6,7 +6,8 @@
         <title>Hello Java EE 70 Continuous Delivery!</title>
     </head>
     <body>
-        <h1> Jenkins poll scm </h1>
+        <h1> GOOD DAY </h1>
+        <h1> NICE DAY </h1>
         <h1> New HTML code added </h1>  
     </body>
 </html>
