@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>DEVOPS</groupId>
-    <artifactId>JENKINS</artifactId>
-    <version>9.0</version>
+    <groupId>org.javaee7.sample</groupId>
+    <artifactId>javaee7-simple-sample</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>myproject</name>
+    <name>javaee7-simple-sample</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -13,7 +13,7 @@
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
-            <version>9.0</version>
+            <version>7.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -31,18 +31,18 @@
     </developers>
     <distributionManagement>
         <repository>
-            <id>sathya</id>
+            <id>deployment</id>
             <name>Internal Releases</name>
-            <url>http://35.196.76.168:8081/repository/maven-releases/</url>
+            <url>http://10.146.0.2:8081/repository/mobilebank-rel/</url>
         </repository>
         <snapshotRepository>
-            <id>sathya</id>
+            <id>deployment</id>
             <name>Internal Snapshot Releases</name>
-            <url>http://35.196.76.168:8081/repository/maven-snapshots/</url>
+            <url>http://10.146.0.2:8081/repository/mobilebank-snap/</url>
         </snapshotRepository>
     </distributionManagement>
     <build>
-    	<finalName>myproj</finalName>
+    	<finalName>javaee7-simple-sample</finalName>
         <pluginManagement>
             <plugins>
                 <plugin>
