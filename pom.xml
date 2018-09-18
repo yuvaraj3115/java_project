@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>CM_TOOLS</groupId>
-    <artifactId>PUPPET</artifactId>
-    <version>3.05</version>
+    <artifactId>SALTSTACK</artifactId>
+    <version>1.05</version>
     <packaging>war</packaging>
     <name>myproj</name>
     <properties>
@@ -33,12 +33,12 @@
         <repository>
             <id>nexus</id>
             <name>Internal Releases</name>
-            <url>http://104.196.96.244:8081/repository/maven-releases/</url>
+            <url>http://35.237.149.233:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>nexus</id>
             <name>Internal Snapshot Releases</name>
-            <url>http://104.196.96.244:8081/repository/maven-snapshots/</url>
+            <url>http://35.237.149.233:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
     <build>
