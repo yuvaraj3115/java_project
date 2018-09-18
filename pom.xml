@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>CM_TOOLS</groupId>
     <artifactId>SALTSTACK</artifactId>
-    <version>1.05</version>
+    <version>2.05</version>
     <packaging>war</packaging>
     <name>myproj</name>
     <properties>
