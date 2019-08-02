@@ -31,14 +31,14 @@
     </developers>
     <distributionManagement>
         <repository>
-            <id>nexus</id>
-            <name>Internal Releases</name>
-            <url>http://35.225.145.102:8081/repository/maven-releases/</url>
+            <id>nexus-artifact</id>
+	    <name>Release</name>
+            <url>http://3.16.150.37:8081/nexus/content/repositories/nexus-artifact</url>
         </repository>
         <snapshotRepository>
-            <id>nexus</id>
-            <name>Internal Snapshot Releases</name>
-            <url>http://35.225.145.102:8081/repository/maven-snapshots/</url>
+            <id>snapshots</id>
+            <name>Snapshots</name>
+            <url>http://3.16.150.37:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
     <build>
