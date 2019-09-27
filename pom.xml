@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>suryam</groupId>
-    <artifactId>myproj</artifactId>
+    <groupId>1234</groupId>
+    <artifactId>mvn1</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
-    <name>myproj</name>
+    <name>mvn2</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -32,13 +32,13 @@
     <distributionManagement>
         <repository>
             <id>nexus-artifact</id>
-	    <name>Release</name>
-            <url>http://3.16.150.37:8081/nexus/content/repositories/nexus-artifact</url>
+	    <name>mvn1</name>
+            <url>http://18.217.241.42:8081/nexus/content/repositories/mvn1</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
             <name>Snapshots</name>
-            <url>http://3.16.150.37:8081/nexus/content/repositories/snapshots/</url>
+            <url>http://18.217.241.42:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
     <build>
