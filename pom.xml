@@ -32,13 +32,13 @@
     <distributionManagement>
         <repository>
             <id>nexus-artifact</id>
-	    <name>mvn1</name>
-            <url>http://18.217.241.42:8081/nexus/content/repositories/mvn1</url>
+	    <name>release</name>
+            <url>http://52.66.105.51:8081/nexus/content/repositories/nexus-artifact</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
             <name>Snapshots</name>
-            <url>http://18.217.241.42:8081/nexus/content/repositories/snapshots/</url>
+            <url>http://52.66.105.51:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
     <build>
