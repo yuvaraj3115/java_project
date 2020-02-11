@@ -5,4 +5,4 @@
      raw: docker pull sreedevops26/nginx:myproj1.0
 
    - name: create docker container 
-     raw: docker run -dti --name dev-env -p 8082:8080 tsreedevops26/nginx:myproj1.0
+     raw: docker run -dti --name dev-env -p 8082:8080 sreedevops26/nginx:myproj1.0
