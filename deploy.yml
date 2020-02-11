@@ -4,5 +4,9 @@
    - name: pull image from registry
      raw: docker pull sreedevops26/nginx:myproj1.0
 
+   - name: delete dev-env container if already exists
+     raw: docker rm -f dev-env
+     ignore_errors: true
+
    - name: create docker container 
      raw: docker run -dti --name dev-env -p 8082:8080 sreedevops26/nginx:myproj1.0
