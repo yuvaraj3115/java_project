@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1>Hello DevOps Dev Env</h1>
-        <h1>Good day DevOps Team</h1>
+        <h1>Good day DevOps team</h1>
 
 
 <table width="40%" bgcolor="yellow" align="center" border="1">
