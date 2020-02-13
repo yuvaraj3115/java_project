@@ -10,7 +10,7 @@
      tags:
        - dev
 
-   - name: create docker container 
+   - name: create docker container for dev env 
      raw: docker run -dti --name dev-env -p 8082:8080 sreedevops26/nginx:myproj1.0
      tags:
        - dev
@@ -21,7 +21,7 @@
      tags:
        - qa
 
-   - name: create docker container
+   - name: create docker container for qa env
      raw: docker run -dti --name qa-env -p 8083:8080 sreedevops26/nginx:myproj1.0
      tags:
        - qa
@@ -32,7 +32,7 @@
      tags:
        - prod
 
-   - name: create docker container
+   - name: create docker container prod env
      raw: docker run -dti --name prod-env -p 8084:8080 sreedevops26/nginx:myproj1.0
      tags:
        - prod
