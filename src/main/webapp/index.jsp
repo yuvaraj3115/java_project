@@ -6,7 +6,7 @@
         <title>Hello Java EE Continuous Delivery!</title>
     </head>
     <body>
-        <h1>Hello DevOps Dev Env</h1>
+        <h1>Hello DevOps QA-Env</h1>
         <h1>Good day DevOps people</h1>
 
 
