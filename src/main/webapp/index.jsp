@@ -6,8 +6,8 @@
         <title>Hello Java EE Continuous Delivery!</title>
     </head>
     <body>
-        <h1>Hello DevOps Prod-Env</h1>
-        <h1>Good day DevOps people</h1>
+        <h1>Hello All GoodMorning</h1>
+        <h1>Good moring to DevOps people</h1>
 
 
 <table width="40%" bgcolor="yellow" align="center" border="1">
