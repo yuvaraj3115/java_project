@@ -42,7 +42,7 @@ script
 {
 if("${params.select_env}" == "dev")
 {
-ansiblePlaybook credentialsId: 'infra-server-creds', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/cicd-project1/deploy.yml', skippedTags: 'qa, prod'
+ansiblePlaybook credentialsId: 'infra-server-creds', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/main-cicd-project/deploy.yml', skippedTags: 'qa, prod'
 }
 }
 }
@@ -55,7 +55,7 @@ script
 {
 if("${params.select_env}" == "qa")
 {
-ansiblePlaybook credentialsId: 'infra-server-creds', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/cicd-project1/deploy.yml', skippedTags: 'dev, prod'
+ansiblePlaybook credentialsId: 'infra-server-creds', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/main-cicd-project/deploy.yml', skippedTags: 'dev, prod'
 }
 }
 }
@@ -68,7 +68,7 @@ script
 {
 if("${params.select_env}" == "prod")
 {
-ansiblePlaybook credentialsId: 'infra-server-creds', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/cicd-project1/deploy.yml', skippedTags: 'dev, qa'
+ansiblePlaybook credentialsId: 'infra-server-creds', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/main-cicd-project/deploy.yml', skippedTags: 'dev, qa'
 }
 }
 }
