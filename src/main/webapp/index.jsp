@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1>Hello All GoodMorning to everybody</h1>
-        <h1>Hello All, this is pipeline project for qa env</h1>
+        <h1>Hello All, this is pipeline project for prod env</h1>
 
 
 <table width="40%" bgcolor="yellow" align="center" border="1">
