@@ -55,7 +55,7 @@ script
 {
 if("${params.select_env}" == "dev")
 {
-ansiblePlaybook credentialsId: '42943a63-e3c0-4075-a2a2-687d4628b4aa', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/sonata_project/deploy.yml', skippedTags: 'qa,prod'
+ansiblePlaybook credentialsId: 'infraserver_crdentials', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/sonata_project/deploy.yml', skippedTags: 'qa,prod'
 }
 }
 }
@@ -70,7 +70,7 @@ script
 {
 if("${params.select_env}" == "qa")
 {
-ansiblePlaybook credentialsId: '42943a63-e3c0-4075-a2a2-687d4628b4aa', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/sonata_project/deploy.yml', skippedTags: 'dev,prod'
+ansiblePlaybook credentialsId: 'infraserver_crdentials', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/sonata_project/deploy.yml', skippedTags: 'dev,prod'
 }
 }
 }
@@ -85,7 +85,7 @@ script
 {
 if("${params.select_env}" == "prod")
 {
-ansiblePlaybook credentialsId: '42943a63-e3c0-4075-a2a2-687d4628b4aa', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/sonata_project/deploy.yml', skippedTags: 'dev,qa'
+ansiblePlaybook credentialsId: 'infraserver_crdentials', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/sonata_project/deploy.yml', skippedTags: 'dev,qa'
 }
 }
 }
