@@ -38,7 +38,7 @@ steps
 {
 withCredentials([string(credentialsId: 'DOCKER', variable: 'DOCKER_PASS')]) 
 {
-    sh "docker login -u yuvarajnbkr2015 -p ${DOCKER_PASS}
+    sh "docker login -u yuvarajnbkr2015 -p ${DOCKER_PASS}"
 }
     sh "docker push yuvarajnbkr2015/sonata1:myproj1.0"
 }
