@@ -1,8 +1,8 @@
 ---
- - hosts: infra
+ - hosts: infrastructure
    tasks:
    - name: pull image from registry
-     raw: docker pull sreedevops26/nginx:myproj1.0
+     raw: docker pull yuvarajnbkr2015/sonata1:myproj1.0
 
    - name: delete dev-env container if already exists
      raw: docker rm -f dev-env
@@ -11,7 +11,7 @@
        - dev
 
    - name: create docker container for dev env 
-     raw: docker run -dti --name dev-env -p 8082:8080 sreedevops26/nginx:myproj1.0
+     raw: docker run -dti --name dev-env -p 8082:8080 yuvarajnbkr2015/sonata1:myproj1.0
      tags:
        - dev
 
@@ -22,7 +22,7 @@
        - qa
 
    - name: create docker container for qa env
-     raw: docker run -dti --name qa-env -p 8083:8080 sreedevops26/nginx:myproj1.0
+     raw: docker run -dti --name qa-env -p 8083:8080 yuvarajnbkr2015/sonata1:myproj1.0
      tags:
        - qa
 
@@ -33,7 +33,7 @@
        - prod
 
    - name: create docker container prod env
-     raw: docker run -dti --name prod-env -p 8084:8080 sreedevops26/nginx:myproj1.0
+     raw: docker run -dti --name prod-env -p 8084:8080 yuvarajnbkr2015/sonata1:myproj1.0
      tags:
        - prod
 

@@ -7,7 +7,7 @@ stage('Checkout SCM')
 {
 steps
 {
-git credentialsId: 'github-creds', url: 'https://github.com/sreedevops26/java-project.git'
+git credentialsId: 'GITHUB_CREDENTIALS', url: 'https://github.com/yuvaraj3115/java_project.git'
 }
 }
 stage('build code from maven')
@@ -21,17 +21,18 @@ stage('create artifacts as docker image')
 {
 steps
 {
-sh 'docker build -t sreedevops26/nginx:myproj1.0 -f myproj-dockerfile .'
+sh 'docker build -t yuvarajnbkr2015/sonata1:myproj1.0 -f myproj-dockerfile .'
 }
 }
 stage('push newly created image into docker registry')
 {
 steps
 {
-withDockerRegistry([credentialsId: 'docker-reg-creds', url: 'https://index.docker.io/v1/']) 
+withCredentials([string(credentialsId: 'DOCKERHUB_PASSWORD', variable: 'DOCKERHUB_CREDENTIALS')])  
 {
-    sh 'docker push sreedevops26/nginx:myproj1.0'
+    sh "docker login -u yuvarajnbkr2015 -p ${DOCKERHUB_CRDENTIALS}"
 }
+    sh "docker push yuvarajnbkr2015/sonata1:myproj1.0"
 }
 }
 stage('execute ansible playbook on dev env')
@@ -42,9 +43,7 @@ script
 {
 if("${params.select_env}" == "dev")
 {
-ansiblePlaybook credentialsId: 'infra-server-creds', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/main-cicd-project/deploy.yml', skippedTags: 'qa, prod'
-}
-}
+ansiblePlaybook credentialsId: '42943a63-e3c0-4075-a2a2-687d4628b4aa', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/sonata_project/deploy.yml', skippedTags: 'qa,prod'
 }
 }
 stage('execute ansible playbook on qa env')
@@ -55,7 +54,7 @@ script
 {
 if("${params.select_env}" == "qa")
 {
-ansiblePlaybook credentialsId: 'infra-server-creds', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/main-cicd-project/deploy.yml', skippedTags: 'dev, prod'
+ansiblePlaybook credentialsId: '42943a63-e3c0-4075-a2a2-687d4628b4aa', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/sonata_project/deploy.yml', skippedTags: 'dev,prod'
 }
 }
 }
@@ -68,7 +67,7 @@ script
 {
 if("${params.select_env}" == "prod")
 {
-ansiblePlaybook credentialsId: 'infra-server-creds', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/main-cicd-project/deploy.yml', skippedTags: 'dev, qa'
+ansiblePlaybook credentialsId: '42943a63-e3c0-4075-a2a2-687d4628b4aa', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/sonata_project/deploy.yml', skippedTags: 'dev,qa'
 }
 }
 }
