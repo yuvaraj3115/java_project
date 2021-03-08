@@ -3,6 +3,8 @@ pipeline
 agent any
 stages
 {
+
+
 stage('Checkout SCM')
 {
 steps
@@ -10,6 +12,8 @@ steps
 git credentialsId: 'GITHUB_CREDENTIALS', url: 'https://github.com/yuvaraj3115/java_project.git'
 }
 }
+
+
 stage('build code from maven')
 {
 steps
@@ -17,6 +21,8 @@ steps
  sh 'mvn install'
 }
 }
+
+
 stage('create artifacts as docker image')
 {
 steps
@@ -24,6 +30,8 @@ steps
 sh 'docker build -t yuvarajnbkr2015/sonata1:myproj1.0 -f myproj-dockerfile .'
 }
 }
+
+
 stage('push newly created image into docker registry')
 {
 steps
@@ -35,10 +43,14 @@ withCredentials([string(credentialsId: 'DOCKERHUB_PASSWORD', variable: 'DOCKERHU
     sh "docker push yuvarajnbkr2015/sonata1:myproj1.0"
 }
 }
+
+
+
 stage('execute ansible playbook on dev env')
 {
 steps
 {
+
 script
 {
 if("${params.select_env}" == "dev")
@@ -46,6 +58,10 @@ if("${params.select_env}" == "dev")
 ansiblePlaybook credentialsId: '42943a63-e3c0-4075-a2a2-687d4628b4aa', installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: '/var/lib/jenkins/workspace/sonata_project/deploy.yml', skippedTags: 'qa,prod'
 }
 }
+}
+}
+
+
 stage('execute ansible playbook on qa env')
 {
 steps
@@ -59,6 +75,8 @@ ansiblePlaybook credentialsId: '42943a63-e3c0-4075-a2a2-687d4628b4aa', installat
 }
 }
 }
+
+
 stage('execute ansible playbook on prod env')
 {
 steps
@@ -72,6 +90,7 @@ ansiblePlaybook credentialsId: '42943a63-e3c0-4075-a2a2-687d4628b4aa', installat
 }
 }
 }
+
 }
 }
 
